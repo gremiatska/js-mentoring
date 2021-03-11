@@ -11,6 +11,10 @@ class Triangle {
         this.b = b;
         this.c = c;
     }
+/*
+    Triangle area formula:
+    https://www.mathopenref.com/coordtrianglearea.html
+ */
 
     area(){
         let result = Math.abs((this.a.x * (this.b.y - this.c.y)
