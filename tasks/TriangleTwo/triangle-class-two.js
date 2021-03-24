@@ -1,10 +1,4 @@
-class Point {
-    constructor(x, y){
-        this.x = x;
-        this.y = y;
-    }
-}
-
+import Point from './point-class-two.js';
 class Triangle {
     /**
      *
@@ -17,15 +11,15 @@ class Triangle {
         this.b = b;
         this.c = c;
     }
-/*
-    Triangle area formula:
-    https://www.mathopenref.com/coordtrianglearea.html
- */
+    /*
+        Triangle area formula:
+        https://www.mathopenref.com/coordtrianglearea.html
+     */
 
     area(){
         let result = Math.abs((this.a.x * (this.b.y - this.c.y)
-                                + this.b.x * (this.c.y - this.a.y)
-                                + this.c.x * (this.a.y - this.b.y)) / 2);
+            + this.b.x * (this.c.y - this.a.y)
+            + this.c.x * (this.a.y - this.b.y)) / 2);
         if(isNaN(result) || result === 0){
             throw "Area cannot be calculated"
         }
@@ -35,8 +29,8 @@ class Triangle {
     }
 }
 const pointA = new Point(1,1);
-const pointB = new Point(1,-1);
-const pointC = new Point(1,-1);
+const pointB = new Point(1,2);
+const pointC = new Point(4,-5);
 const testTriangle = new Triangle(pointA, pointB, pointC)
 
 try {
